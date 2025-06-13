@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <section id="formulario">
+    <form name="frmregistro" method="post" action="principal.html">
+      <h1>Formulario de Registro</h1>
+
+      <label>Complete el formulario con sus datos</label>
+      <hr>
+
+      <label>Nombres y apellidos
+        <input name="txtnombres" type="text" placeholder="Ingrese datos completos" required />
+      </label>
+
+      <label>DNI
+        <input type="text" name="txtdni" placeholder="8 caracteres" disabled />
+      </label>
+
+      <label>Teléfono
+        <input type="tel" name="txtfono" />
+      </label>
+
+      <fieldset>
+        <legend>Estudios realizados</legend>
+        <label><input type="checkbox" name="chkprimaria" checked /> Primaria</label>
+        <label><input type="checkbox" name="chksecundaria" /> Secundaria</label>
+        <label><input type="checkbox" name="chktecnico" /> Técnico</label>
+        <label><input type="checkbox" name="chkuniversitario" /> Universitario</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Estado civil</legend>
+        <label><input type="radio" name="btnestado" value="s" checked /> Soltero</label>
+        <label><input type="radio" name="btnestado" value="c" /> Casado</label>
+        <label><input type="radio" name="btnestado" value="v" /> Viudo</label>
+        <label><input type="radio" name="btnestado" value="d" /> Divorciado</label>
+      </fieldset>
+
+      <label>Provincia
+        <input type="text" name="txtprovincia" list="provincias" />
+        <datalist id="provincias">
+          <option value="Lima" />
+          <option value="Arequipa" />
+          <option value="Tacna" />
+          <option value="Trujillo" />
+          <option value="Huancayo" />
+        </datalist>
+      </label>
+
+      <label>Correo electrónico
+        <input type="email" name="txtemail" />
+      </label>
+
+      <label>Clave personal
+        <input type="password" name="txtclave" placeholder="Máximo 6 caracteres" />
+      </label>
+
+      <label>Color de preferencia
+        <input type="color" name="txtcolor" />
+      </label>
+
+      <label>Fecha de nacimiento
+        <input type="datetime-local" name="txtfecha" />
+      </label>
+
+      <div class="botones">
+        <input type="submit" value="Registrar">
+        <input type="reset" value="Limpiar">
+      </div>
+    </form>
+  </section>
+</body>
+</html>
